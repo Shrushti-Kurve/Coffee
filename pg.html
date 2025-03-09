@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Menu</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(103, 50, 12);
+        }
+
+        .container {
+            margin: 50px;
+        }
+
+        .header {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .coffee-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .coffee-item {
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .coffee-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .coffee-item div {
+            margin-top: 10px;
+        }
+
+        .coffee-item h4 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .coffee-item p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .total-count {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        select {
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="header">
+            <h2>Cafe Menu</h2>
+            <div class="total-count">
+                <label for="coffeeType">Select Coffee Type:</label>
+                <select id="coffeeType" onchange="filterCoffee()">
+                    <option value="all">All</option>
+                    <option value="hot">Hot Coffee</option>
+                    <option value="cold">Cold Coffee</option>
+                </select>
+
+                <p>Total Items: <span id="totalCount">10</span></p>
+            </div>
+        </div>
+
+      
+        <div id="coffeeItems" class="coffee-list">
+            
+            <div class="coffee-item hot-coffee">
+                <img src="https://www.netmeds.com/images/cms/wysiwyg/blog/Post/2018/10/coffee_its_benefits_898_1_.jpg" alt="Cappuccino">
+                <div>
+                    <h4>Cappuccino</h4>
+                    <p>Price: $100</p>
+                </div>
+            </div>
+            <div class="coffee-item hot-coffee">
+                <img src="https://gatherforbread.com/wp-content/uploads/2014/10/Dark-Chocolate-Mocha-1-683x1024.jpg" alt="Mocha">
+                <div>
+                    <h4>Mocha</h4>
+                    <p>Price: $150</p>
+                </div>
+            </div>
+            <div class="coffee-item hot-coffee">
+                <img src="https://www.oddbeans.in/cdn/shop/articles/image1_9a1a2488-7d3e-49e6-ae4a-babcc1c17218.jpg?v=1721478108&width=1100" alt="Americano">
+                <div>
+                    <h4>Americano</h4>
+                    <p>Price: $200</p>
+                </div>
+            </div>
+            <div class="coffee-item hot-coffee">
+                <img src="https://liliebakery.fr/wp-content/uploads/2024/10/latte-macchiato-recette-facile-lilie-bakery-500x500.jpg" alt="Latte">
+                <div>
+                    <h4>Latte</h4>
+                    <p>Price: $200</p>
+                </div>
+            </div>
+            <div class="coffee-item hot-coffee">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-X3W-kbBBPNBEHyP20GpHTidfeqVDjhvsC0tA3bh0_14ZqY4r92_uDT49F1cb64kC6kI&usqp=CAU" alt="Espresso">
+                <div>
+                    <h4>Espresso</h4>
+                    <p>Price: $250</p>
+                </div>
+            </div>
+
+            <div class="coffee-item cold-coffee">
+                <img src="https://palatesdesire.com/wp-content/uploads/2022/02/iced-coffee-recipe@palates-desire-4-500x500.jpg" alt="Iced Coffee">
+                <div>
+                    <h4>Iced Coffee</h4>
+                    <p>Price: $150</p>
+                </div>
+            </div>
+            <div class="coffee-item cold-coffee">
+                <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/iced-latte-30188f7.jpg" alt="Iced Latte">
+                <div>
+                    <h4>Iced Latte</h4>
+                    <p>Price: $200</p>
+                </div>
+            </div>
+            <div class="coffee-item cold-coffee">
+                <img src="https://lifemadesweeter.com/wp-content/uploads/Easy-Cold-Brew-Coffee-Recipe-Vegan-Dairy-Free-Paleo-Healthy.jpg" alt="Cold Brew">
+                <div>
+                    <h4>Cold Brew</h4>
+                    <p>Price: $150</p>
+                </div>
+            </div>
+            <div class="coffee-item cold-coffee">
+                <img src="https://www.allrecipes.com/thmb/LgtetzzQWH3GMxFISSii84XEAB8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/258686-IcedCaramelMacchiato-ddmps-4x3-104704-2effb74f7d504b8aa5fbd52204d0e2e5.jpg" alt="Iced Caramel Macchito">
+                <div>
+                    <h4>Iced Caramel Macchito</h4>
+                    <p>Price: $300</p>
+                </div>
+            </div>
+            <div class="coffee-item cold-coffee">
+                <img src="https://mocktail.net/wp-content/uploads/2022/03/homemade-Iced-Americano-recipe_1ig.jpg" alt="Iced Americano">
+                <div>
+                    <h4>Iced Americano</h4>
+                    <p>Price: $50</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

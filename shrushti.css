@@ -1,0 +1,193 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://img.pikbest.com/wp/202344/plaid-texture-top-view-of-cozy-autumn-themed-brown-paper-background-with-warm_9920787.jpg!w700wp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(88, 41, 8);
+}
+
+#page1 {
+    height: 100%;
+    width: 100%;
+}
+
+
+#page2 {
+    height: 80%;
+    width: 100%;
+    background-color: brown;
+    background-image: url('https://t3.ftcdn.net/jpg/04/36/77/74/360_F_436777481_3Nk1sGJwa9UaYtJZ8dzeHVZrV4j0ACo3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.box1 h1 {
+    font-style: italic;
+    font-size: 3rem;
+    color: white;
+    margin: 20px 0;
+}
+
+.box4 {
+    height: 30%;
+    width: 28%;
+    margin-top: 10%;
+    text-align: center;
+    z-index: 2;
+}
+
+.box4 h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #ff7f50;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+
+button h2 {
+    margin: 0;
+}
+
+#page2 table {
+    margin: 40px auto;
+    width: 90%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#page2 th,
+#page2 td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+#page2 th {
+    background-color: #ff7f50;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#page2 td {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.1rem;
+    color: bisque;
+}
+
+#page2 td h3 {
+    margin: 0;
+}
+
+#page2 h1 p {
+    color: wheat;
+}
+
+a {
+    color: #ff7f50;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 15px;
+    right: 15px; 
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 1;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.hamburger:hover + .dropdown-content {
+    display: block;
+}
+footer {
+    background-image: url('https://t3.ftcdn.net/jpg/04/36/77/74/360_F_436777481_3Nk1sGJwa9UaYtJZ8dzeHVZrV4j0ACo3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgb(100, 47, 9);
+    color: white; 
+    padding: 40px 20px; 
+    font-family: Arial, sans-serif; 
+}
+
+footer h2 {
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+    text-transform: uppercase; 
+    border-bottom: 2px solid #fff; 
+    padding-bottom: 5px;
+}
+
+footer p {
+    font-size: 1em; 
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+}
